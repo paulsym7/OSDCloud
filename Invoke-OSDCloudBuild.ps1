@@ -15,4 +15,4 @@ $Context = New-AzStorageContext -StorageAccountName $Storage.StorageAccount -Sas
 $ImageFile = Get-AzStorageFile -ShareName image -Context $Context | Where-Object{$_.Name -like "*$OS*$Version*.wim"} | Sort-Object -Property Name -Descending | Select-Object -First 1
 $FileUri = $ImageFile.CloudFile.Uri.AbsoluteUri
 $DownloadUri = '{0}{1}' -f $FileUri,$Storage.StorageAccountReadOnlySasToken
-Start-OSDCloud -ImaeFileUrl $DownloadUri
+Start-OSDCloud -ImageFileUrl $DownloadUri

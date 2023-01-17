@@ -46,6 +46,7 @@ $Global:MyOSDCloud = @{
         #MSCatalogScsiDrivers = $false
 	OSBuild = '22H2'
 	OSEdition = 'Enterprise'
+	OSImageIndex = '6'
 	OSLanguage = 'en-gb'
 	OSLicense = 'Volume'
 	Restart = $true

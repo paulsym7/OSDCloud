@@ -3,7 +3,7 @@ Install-Module -Name OSD -Force
 Import-Module -Name OSD -Force
 Write-Output 'Starting OSD Cloud...'
 Write-Output 'Installing Windows 10 22H2 Enterprise'
-<#
+
 $Params = @{
   OSName = 'Windows 10 22H2 x64'
   OSEdition = 'Enterprise'
@@ -16,8 +16,8 @@ $Params = @{
   ZTI = $true
 }
 Start-OSDCloud @params
-#>
 
+<#
 $Params = @{
     OSVersion   = 'Windows 10'
     OSBuild     = '22H2'
@@ -43,3 +43,4 @@ $Global:MyOSDCloud = @{
 }
 
 Invoke-OSDCloud
+#>

@@ -14,4 +14,20 @@ $Params = @{
   Restart = $true
   ZTI = $true
 }
-Start-OSDCloud @params
+#Start-OSDCloud @params
+
+$Global:MyOSDCloud = @{
+	ApplyManufacturerDrivers = $false
+	ApplyCatalogDrivers = $false
+	ApplyCatalogFirmware = $false
+  OSBuild = '22H2'
+  OSEdition = 'Enterprise'
+  OSLanguage = 'en-gb'
+  OSLicense = 'Retail'
+  Restart = $true
+  ScreenshotCapture = $true
+  SkipAutoPilot = $true
+  #ZTI = $true
+}
+
+Invoke-OSDCloud

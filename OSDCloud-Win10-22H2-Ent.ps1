@@ -7,9 +7,9 @@ $Params = @{
   OSEdition = 'Enterprise'
   OSLanguage = 'en-gb'
   OSLicense = 'Retail'
-  Firmware = '$False'
-  Screenshot = '$True'
-  SkipAutoPilot = '$True'
-  #ZTI = '$True'
+  Firmware = $false
+  Screenshot = $true
+  SkipAutoPilot = $true
+  ZTI = $false
 }
-Start-OSDCloud @params
+Start-OSDCloud @params -Verbose

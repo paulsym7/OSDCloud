@@ -1,6 +1,16 @@
 Write-Output 'Making sure the latest OSD module is installed'
-Install-Module -Name OSD -Force
-Import-Module -Name OSD -Force
+$Installed = Get-Module -Name OSD
+Write-Output "Version $($Installed.Version.ToString()) of the OSD module is currently installed"
+$Latest = Find-Module -Name OSD
+if($Installed.Version.ToString() -lt $Latest.Version.ToString()){
+    Write-Output "Installing version $($Latest.Version.ToString()) of the OSD module"
+    Install-Module -Name OSD -Force
+    Import-Module -Name OSD -Force
+}
+else{
+    Write-Output 'This is the latest avaiable version'
+}
+
 Write-Output 'Starting OSD Cloud...'
 Write-Output 'Installing Windows 10 22H2 Enterprise'
 <#

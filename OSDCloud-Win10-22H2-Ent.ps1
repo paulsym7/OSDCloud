@@ -25,8 +25,11 @@ $Params = @{
     OSLanguage  = 'en-gb'
 }
 $FeatureUpdate = Get-FeatureUpdate @Params
+$OSDImageFile = Find-OSDCloudFile -Name $FeatureUpdate.FileName -Path '\OSDCloud\OS\' | Sort-Object FullName | Where-Object {$_.Length -gt 3GB}
+$ImageFileItem = $OSDImageFile | Where-Object {$_.FullName -notlike "C*"} | Where-Object {$_.FullName -notlike "X*"} | Select-Object -First 1
 
 $Global:MyOSDCloud = @{
+	ImageFileItem = $ImageFileItem
 	ImageFileName = $FeatureUpdate.FileName
 	ImageFileUrl = $FeatureUpdate.FileUri
         MSCatalogFirmware = $false

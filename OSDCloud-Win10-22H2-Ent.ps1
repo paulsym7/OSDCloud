@@ -46,7 +46,7 @@ $Global:MyOSDCloud = @{
         #MSCatalogScsiDrivers = $false
 	OSBuild = '22H2'
 	OSEdition = 'Enterprise'
-	OSImageIndex = '6'
+	OSImageIndex = 'AUTO'
 	OSLanguage = 'en-gb'
 	OSLicense = 'Volume'
 	Restart = $true
@@ -54,4 +54,5 @@ $Global:MyOSDCloud = @{
 	ZTI = $true
 }
 
+Write-Output $MyOSDCloud
 Invoke-OSDCloud

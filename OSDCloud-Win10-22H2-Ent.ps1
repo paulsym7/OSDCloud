@@ -26,11 +26,11 @@ $Params = @{
 }
 $FeatureUpdate = Get-FeatureUpdate @Params
 $OSDImageFile = Find-OSDCloudFile -Name $FeatureUpdate.FileName -Path '\OSDCloud\OS\' | Sort-Object FullName | Where-Object {$_.Length -gt 3GB}
-$ImageFileItem = $OSDImageFile | Where-Object {$_.FullName -notlike "C*"} | Where-Object {$_.FullName -notlike "X*"} | Select-Object -First 1
-Write-Output "Using '$ImageFileItem' as the image file item."
+#$ImageFileItem = $OSDImageFile | Where-Object {$_.FullName -notlike "C*"} | Where-Object {$_.FullName -notlike "X*"} | Select-Object -First 1
+#Write-Output "Using '$ImageFileItem' as the image file item."
 
 $Global:MyOSDCloud = @{
-	ImageFileItem = $ImageFileItem
+	GetFeatureUpdate = $FeatureUpdate
 	ImageFileName = $FeatureUpdate.FileName
 	ImageFileUrl = $FeatureUpdate.FileUri
         MSCatalogFirmware = $false
@@ -43,8 +43,7 @@ $Global:MyOSDCloud = @{
 	OSLicense = 'Retail'
 	Restart = $true
 	SkipAutoPilot = $true
-	#ZTI = $true
+	ZTI = $true
 }
 
 Invoke-OSDCloud
-

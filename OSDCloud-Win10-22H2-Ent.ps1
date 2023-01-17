@@ -20,14 +20,14 @@ $Global:MyOSDCloud = @{
 	ApplyManufacturerDrivers = $false
 	ApplyCatalogDrivers = $false
 	ApplyCatalogFirmware = $false
-  OSBuild = '22H2'
-  OSEdition = 'Enterprise'
-  OSLanguage = 'en-gb'
-  OSLicense = 'Retail'
-  Restart = $true
-  ScreenshotCapture = $true
-  SkipAutoPilot = $true
-  #ZTI = $true
+	OSBuild = '22H2'
+	OSEdition = 'Enterprise'
+	OSLanguage = 'en-gb'
+	OSLicense = 'Retail'
+	Restart = $true
+	ScreenshotCapture = $true
+	SkipAutoPilot = $true
+	#ZTI = $true
 }
 
 Invoke-OSDCloud

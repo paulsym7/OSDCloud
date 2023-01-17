@@ -17,6 +17,7 @@ Write-Output 'Installing Windows 10 22H2 Enterprise'
 $Params = @{
   OSName = 'Windows 10 22H2 x64'
   OSEdition = 'Enterprise'
+  OSEditionID = 'Enterprise'
   OSLanguage = 'en-gb'
   OSLicense = 'Volume'
   Firmware = $false

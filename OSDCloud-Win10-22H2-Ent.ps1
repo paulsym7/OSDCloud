@@ -39,7 +39,7 @@ $Global:MyOSDCloud = @{
 	OSLicense = 'Retail'
 	Restart = $true
 	SkipAutoPilot = $true
-	ZTI = $true
+	#ZTI = $true
 }
 
 Invoke-OSDCloud

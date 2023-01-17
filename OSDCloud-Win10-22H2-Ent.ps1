@@ -17,9 +17,10 @@ $Params = @{
 #Start-OSDCloud @params
 
 $Global:MyOSDCloud = @{
-	ApplyManufacturerDrivers = $false
-	ApplyCatalogDrivers = $false
-	ApplyCatalogFirmware = $false
+        MSCatalogFirmware = $false
+        MSCatalogDiskDrivers = $false
+        MSCatalogNetDrivers = $false
+        MSCatalogScsiDrivers = $false
 	OSBuild = '22H2'
 	OSEdition = 'Enterprise'
 	OSLanguage = 'en-gb'

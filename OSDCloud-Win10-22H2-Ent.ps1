@@ -1,3 +1,4 @@
+Write-Output 'Making sure latest OSD module is installed'
 Install-Module -Name OSD -Force
 Import-Module -Name OSD -Force
 Write-Output 'Starting OSD Cloud...'
@@ -12,4 +13,4 @@ $Params = @{
   SkipAutoPilot = $true
   ZTI = $false
 }
-Start-OSDCloud @params -Verbose
+Start-OSDCloud @params

@@ -38,9 +38,8 @@ $Global:MyOSDCloud = @{
 	OSLanguage = 'en-gb'
 	OSLicense = 'Retail'
 	Restart = $true
-	ScreenshotCapture = $true
 	SkipAutoPilot = $true
-	#ZTI = $true
+	ZTI = $true
 }
 
 Invoke-OSDCloud

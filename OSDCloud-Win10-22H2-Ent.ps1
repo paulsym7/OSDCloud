@@ -25,7 +25,6 @@ $Params = @{
     OSLanguage  = 'en-gb'
 }
 $FeatureUpdate = Get-FeatureUpdate @Params
-$OSDImageFile = Find-OSDCloudFile -Name $FeatureUpdate.FileName -Path '\OSDCloud\OS\' | Sort-Object FullName | Where-Object {$_.Length -gt 3GB}
 
 $Global:MyOSDCloud = @{
 	GetFeatureUpdate = $FeatureUpdate
